@@ -19,6 +19,18 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.breakall {
+  word-break: break-all;
+}
 /*------------------------common----------------------- */
 a {
   text-decoration: none;
@@ -284,30 +296,34 @@ a {
 .popular .course-items .info {
   padding: 16px 22px 22px;
 }
-.courses-list {
+.popular .courses-list {
+  margin-top: 55px;
   display: flex;
   border-radius: 12px;
-  justify-content: space-between;
+  gap: 30px;
 }
 .courses-list .course-items {
+  flex: 1;
   width: 370px;
   border-radius: 12px;
-  border: 1px solid #E2DFDA;
+  border: 1px solid #e2dfda;
   background-color: #fff;
 }
-.courses-list .course-items:hover{
-  box-shadow: 0px 18px 36px 0px #0000000D;
+.courses-list .course-items:hover {
+  box-shadow: 0px 18px 36px 0px #0000000d;
   border: none;
 }
 .courses-list .course-items .thumb {
   height: 278px;
   object-fit: cover;
   width: 100%;
-  border-radius: 12px 12px 0 0 ;
+  border-radius: 12px 12px 0 0;
 }
+.courses-list .course-items .bottom,
 .course-items .heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .courses-list .course-items .heading .title,
 .courses-list .course-items .price {
@@ -317,18 +333,13 @@ a {
   letter-spacing: 0%;
 }
 .courses-list .course-items .desc {
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 6px;
+  margin-bottom: 12px;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   letter-spacing: 0%;
   color: #5f5b53;
-}
-.courses-list .course-items .bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .btn .btn-book {
   border-radius: 25px;
@@ -346,8 +357,73 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 6px;
+  line-height: 1.75;
 }
 .course-items .heading .rating .vale {
   font-weight: 400;
   font-size: 16px;
+}
+
+.user-quote {
+  margin-top: 135px;
+  background-color: #2E2100;
+  padding: 96px 0;
+}
+.user-quote .body {
+  display: flex;
+  background-color: #2E2100;
+}
+.user-quote .body .right-col {
+  width: 66%;
+}
+.user-quote .body .right-col blockquote {
+  font-weight: 400;
+  font-style: Italic;
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  color: #fff;
+  margin-left: 30px;
+}
+
+.user-quote .body .lelf-col .ava img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 72px;
+  height: 72px;
+}
+.user-quote .body .lelf-col .name {
+  font-family: var(--font-Sen);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 2.4rem;
+  line-height: 1.42;
+  color: #f7f7f7;
+  margin-top: 18px;
+}
+.user-quote .body .lelf-col {
+  margin-right: 240px;
+}
+.user-quote .body .lelf-col .desc {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #BFBCB2;
+  margin-top: 4px;
+}
+.user-quote .dot_group{
+  gap: 6px;
+  display: flex;
+  margin-top: 28px;
+}
+.user-quote .dot{
+  height: 6px;
+  width: 6px;
+  background-color: #634700;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.user-quote .dot:active{
+  background-color: #FFB900;
+  cursor: default;
 }
